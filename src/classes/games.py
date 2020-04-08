@@ -42,6 +42,7 @@ class GameSimple(_Game):
         # print('deck:')
         # print(self._deck._cards)
         for card_idx, card in enumerate(self._deck.get_iterable()):
+            # print('card_idx:', card_idx)
             # print(f'card {card_idx}:', card)
             # Each player plays
             player_idx: int

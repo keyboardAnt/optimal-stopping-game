@@ -6,7 +6,7 @@ from os.path import join
 
 class Deck:
     CLASS: [_Deck] = DeckSimple
-    NUM_OF_RED_CARDS: Final[int] = 100_000
+    NUM_OF_RED_CARDS: Final[int] = 1000
 
 class Players:
     PLAYERS_TO_EVALUATE: List[Type[_Player]] = [
@@ -18,7 +18,7 @@ class Players:
 
 
 class Evaluate:
-    NUM_OF_GAMES: int = 1_000
+    NUM_OF_GAMES: int = 1000
 
 
 class Files:
