@@ -1,5 +1,5 @@
 # optimal-stopping-game
-Based on Prof. Moni Naor's "Probability & Computing" course at the Weizmann Institute.
+Inspired by Prof. Moni Naor's questions in the "Probability & Computing" series at the Weizmann Institute.
 
 Requires Python 3.8.2. 
 
