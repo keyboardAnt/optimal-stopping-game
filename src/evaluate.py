@@ -1,5 +1,4 @@
 from src import settings
-# from src.classes.evaluators import EvaluatorConfigSimple, EvaluatorSimple
 from src.classes.evaluators import EvaluatorSimple
 from src.classes.results import ResultsOfEvaluatorSimple
 from os.path import join
@@ -7,8 +6,6 @@ from src.classes import utils
 
 
 if __name__ == '__main__':
-    # evaluator_config = EvaluatorConfigSimple()
-    # evaluator = EvaluatorSimple(config=evaluator_config)
     evaluator = EvaluatorSimple()
     results: ResultsOfEvaluatorSimple = evaluator.get_results()
     output_results_unique_filepath = join(

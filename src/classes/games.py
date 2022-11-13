@@ -39,34 +39,19 @@ class GameSimple(_Game):
         players: List[Type[_Player]] = self._players
         assert len(players) > 0, 'No players'
         # Each turn
-        # print('deck:')
-        # print(self._deck._cards)
         for card_idx, card in enumerate(self._deck.get_iterable()):
-            # print('card_idx:', card_idx)
-            # print(f'card {card_idx}:', card)
             # Each player plays
             player_idx: int
-            # remain_players: List[Type[_Player]] = compress(
-            #     self._players,
-            #     self._players_is_in_game
-            # )
-            # for player_idx, player in enumerate(remain_players):
             for player_idx, player in enumerate(self._players):
                 if self._players_is_in_game[player_idx] is True:
                     # If a player raised a FlagSimple (i.e. a `True` variable)
                     if player.play(card) is True:
                         # Save to results if the player was right
                         if card.all():
-                            # print(f'player {player_idx} won')
                             results[player_idx] = True
-                        # else:
-                            # print(f'player {player_idx} lost')
                         # Remove the player from the list of remain players (this player end his game)
-                        # remain_players.remove(player)
                         self._players_is_in_game[player_idx] = False
-                        # print(f'player {player_idx} is out')
                         if sum(self._players_is_in_game) == 0:
-                            # print('All players are out')
                             return results
         assert sum(self._players_is_in_game) == 0, f"Players that didn't raise a Flag, although there're no more cards"
         return results

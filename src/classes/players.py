@@ -67,7 +67,6 @@ class PlayerStopWeakAdvantage(_Player):
         self._num_of_total_cards_remain -= 1
         if card.all():
             self._num_of_red_cards_remain -= 1
-        # sys.stdout.write(f'\rtotal: {self._num_of_total_cards_remain}, reds: {self._num_of_red_cards_remain}')
         sys.stdout.flush()
         if self._num_of_total_cards_remain == 0:
             return True
